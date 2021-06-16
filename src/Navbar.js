@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { IconButton } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import { withStyles } from '@material-ui/styles';
 import 'rc-slider/assets/index.css';
 import Slider from 'rc-slider';
 import Select from '@material-ui/core/Select';
@@ -6,9 +9,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Snackbar from '@material-ui/core/Snackbar';
 import CloseIcon from '@material-ui/icons/Close';
 import Alert from '@material-ui/lab/Alert';
-import { IconButton } from '@material-ui/core';
-import { Link } from 'react-router-dom';
-import { withStyles } from '@material-ui/styles';
 import styles from './styles/Navbar';
 
 class Navbar extends Component {
@@ -79,7 +79,12 @@ class Navbar extends Component {
                         style={{color: 'black' , fontWeight: 600}} 
                         severity="warning" 
                         action={[
-                            <IconButton onClick={this.closeSnackbar} color='inherit' key='close' aria-label='close '>
+                            <IconButton 
+                                onClick={this.closeSnackbar} 
+                                color='inherit' 
+                                key='close' 
+                                aria-label='close'
+                            >
                                 <CloseIcon style={{fontSize: '12px'}}  />
                             </IconButton>
                         ]}

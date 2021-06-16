@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
+import { withStyles } from '@material-ui/styles';
 import ColorBox from './ColorBox';
 import Navbar from './Navbar';
 import PaletteFooter from './PaletteFooter';
-import { withStyles } from '@material-ui/styles';
 import styles from './styles/singleColorPalette'
 
 class singleColorPalette extends Component {
@@ -46,7 +46,7 @@ class singleColorPalette extends Component {
                 <div className={classes.PaletteColors}>
                     {colorBoxes}
                     <div className={classes.goBack}>
-                        <Link to={`/palette/${id}`} className={classes.goBackBtn}>Go Back</Link>
+                        <Link to={`/palette/${id}`}>Go Back</Link>
                     </div>
                 </div>
                 <PaletteFooter paletteName={paletteName} emoji={emoji}/>

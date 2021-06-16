@@ -1,3 +1,4 @@
+import sizes from './Sizes';
 export default {
 
     Palette: {
@@ -17,30 +18,41 @@ export default {
         cursor: "pointer",
         marginBottom: "-3.6px",
         opacity: 1,
-        backgroundColor: "rgba(7, 56, 40, 0.849)"
-    },
+        backgroundColor: "rgba(7, 56, 40, 0.849)",
+        "& a": {
+            width: "100px",
+            height: "30px",
+            position: "absolute",
+            display: "inline-block",
+            top: "50%",
+            left: "50%",
+            marginTop: "-15px",
+            marginLeft: "-50px",
+            textAlign: "center",
+            outline: "none",
+            background: "rgba(255, 255, 255, 0.3)",
+            fontSize: "1rem",
+            fontWeight: "bold",
+            lineHeight: "30px",
+            color: "white",
+            textTransform: "uppercase",
+            border: "none",
+            cursor: "pointer",
+            transition: "0.5s",
+            textDecoration: "none"
+        },
+        [sizes.down("lg")]: {
+            width: "25%",
+            height: "33.3333%"
+        },
+        [sizes.down("md")]: {
+            width: "50%",
+            height: "20%"
+        },
+        [sizes.down("xs")]: {
+            width: "100%",
+            height: "9%"
+        },
 
-    goBackBtn:{
-        width: "100px",
-        height: "30px",
-        position: "absolute",
-        display: "inline-block",
-        top: "50%",
-        left: "50%",
-        marginTop: "-15px",
-        marginLeft: "-50px",
-        textAlign: "center",
-        outline: "none",
-        background: "rgba(255, 255, 255, 0.3)",
-        fontSize: "1rem",
-        fontWeight: "bold",
-        lineHeight: "30px",
-        color: "white",
-        textTransform: "uppercase",
-        border: "none",
-        cursor: "pointer",
-        transition: "0.5s",
-        textDecoration: "none"
     }
-
 }
